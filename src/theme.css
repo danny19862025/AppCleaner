@@ -1,0 +1,33 @@
+window { background: @BG@; color: @TEXT@; }
+window label { color: @TEXT@; }
+.sidebar { background: @SIDE@; padding: 22px; }
+.content { padding: 32px; }
+.title { font-size: 30px; font-weight: 800; }
+.heading { font-size: 18px; font-weight: bold; }
+window .eyebrow { color: @ACCENT@; font-weight: bold; }
+window .muted { color: @MUTED@; }
+.card { background: @CARD@; border-radius: 12px; padding: 16px; }
+list { background: transparent; color: @TEXT@; }
+row { padding: 10px; border-radius: 8px; }
+.app-list row { padding: 12px 10px; margin-bottom: 4px; color: @TEXT@; }
+.app-list row:hover { background: @HOVER@; }
+.app-list row:selected { background: @SELECT@; }
+window .app-list row .app-name { color: @TEXT@; font-size: 16px; font-weight: 600; }
+window .app-list row:selected .app-name { color: @SELECTTEXT@; }
+.app-list row image { color: @ACCENT@; }
+button, entry, searchentry, combobox button { background: @CARD@; color: @TEXT@; border: 1px solid @BORDER@; }
+button { padding: 10px 16px; border-radius: 8px; }
+button:hover { background: @HOVER@; }
+button label { color: inherit; }
+button.suggested-action { background: @BUTTON@; color: @BUTTONTEXT@; border-color: @BUTTON@; }
+button.suggested-action label { color: @BUTTONTEXT@; }
+button:disabled { opacity: 0.5; }
+checkbutton:checked check { background: @BUTTON@; color: @BUTTONTEXT@; }
+entry:focus-within, searchentry:focus-within { outline: 2px solid @ACCENT@; }
+entry, searchentry { padding: 8px; }
+entry text, searchentry text { color: @TEXT@; background: transparent; }
+entry placeholder, searchentry placeholder { color: @MUTED@; }
+combobox popover contents { background: @CARD@; color: @TEXT@; }
+combobox popover row:selected { background: @SELECT@; }
+combobox popover row:selected label { color: @SELECTTEXT@; }
+scrollbar slider { min-width: 6px; min-height: 6px; }

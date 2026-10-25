@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.appcleaner.Linux</id>
+  <name>AppCleaner</name>
+  <summary>Review and safely trash Linux application data</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <developer id="io.github.appcleaner"><name>Danny</name></developer>
+  <description><p>Created by Danny. Find installed applications, review related settings, caches and local data, and move selected folders to Trash after confirmation.</p><p>Uninstall command suggestions are provided separately for supported host package managers.</p></description>
+  <launchable type="desktop-id">io.github.appcleaner.Linux.desktop</launchable>
+  <content_rating type="oars-1.1" />
+  <releases><release version="0.1.0" date="2026-10-25" /></releases>
+</component>

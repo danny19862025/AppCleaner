@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=AppCleaner
+Comment=Review and safely trash application data
+Exec=appcleaner
+Icon=io.github.appcleaner.Linux
+Terminal=false
+Categories=System;Utility;
+Keywords=clean;cache;applications;storage;
+StartupNotify=true

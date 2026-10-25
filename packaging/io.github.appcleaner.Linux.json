@@ -1,0 +1,50 @@
+{
+  "app-id": "io.github.appcleaner.Linux",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "50",
+  "sdk": "org.gnome.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "appcleaner",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+    "--filesystem=home",
+    "--filesystem=host-os:ro",
+    "--filesystem=~/.var/app",
+    "--filesystem=xdg-data/flatpak:ro",
+    "--filesystem=/var/lib/flatpak:ro",
+    "--filesystem=/var/lib/snapd/desktop:ro",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--filesystem=/nix/store:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/appcleaner/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "appcleaner",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo build --release --frozen --offline",
+        "install -Dm755 target/release/appcleaner /app/bin/appcleaner",
+        "install -Dm644 packaging/io.github.appcleaner.Linux.desktop /app/share/applications/io.github.appcleaner.Linux.desktop",
+        "install -Dm644 packaging/io.github.appcleaner.Linux.svg /app/share/icons/hicolor/scalable/apps/io.github.appcleaner.Linux.svg",
+        "install -Dm644 packaging/io.github.appcleaner.Linux.metainfo.xml /app/share/metainfo/io.github.appcleaner.Linux.metainfo.xml",
+        "install -Dm644 LICENSE /app/share/licenses/appcleaner/LICENSE"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "../.flatpak-source"
+        }
+      ]
+    }
+  ]
+}

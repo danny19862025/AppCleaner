@@ -1,0 +1,6 @@
+/target
+/.flatpak-source
+/.flatpak-build
+/.flatpak-repo
+/.flatpak-builder
+/dist

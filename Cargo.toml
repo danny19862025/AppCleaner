@@ -1,0 +1,13 @@
+[package]
+name = "appcleaner"
+version = "0.1.0"
+edition = "2024"
+description = "Review and safely trash Linux application data"
+license = "MIT"
+
+[dependencies]
+gtk = { package = "gtk4", version = "=0.10.3", features = ["v4_10"] }
+
+[profile.release]
+opt-level = "s"
+strip = true
